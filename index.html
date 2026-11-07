@@ -313,6 +313,18 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-b
     window.scrollTo({ top: 0, behavior: calmo ? 'auto' : 'smooth' });
     try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {}
   });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var alvo = id && document.getElementById(id);
+    if (!alvo) return;
+    e.preventDefault();
+    var calmo = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    alvo.scrollIntoView({ behavior: calmo ? 'auto' : 'smooth', block: 'start' });
+    if (!alvo.hasAttribute('tabindex')) alvo.setAttribute('tabindex', '-1');
+    alvo.focus({ preventScroll: true });
+  });
   var dlg = document.getElementById('zoom');
   var zimg = document.getElementById('zoom-img');
   function ampliar() {
