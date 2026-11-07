@@ -1,0 +1,19 @@
+# Porcelina
+
+> Porcelina é um app de finanças pessoais para macOS, em português do Brasil. Importa faturas de cartão e extratos de banco, organiza os gastos por categoria, acompanha investimentos da B3 e estima o imposto de renda. Os dados ficam no próprio Mac. Ainda não está disponível para download.
+
+## Fatos
+
+- Plataforma: macOS. Idioma: português do Brasil.
+- Dados: ficam no Mac do usuário; sem conta, sem anúncios e sem telemetria. A internet é usada para cotações, índices (CDI e IPCA) e, só quando o usuário pede, para ler PDF por IA.
+- Importa: CSV, planilhas e PDF de fatura de Nubank, XP, Banco do Brasil, Santander, BTG e outros. Nos PDFs de fatura, confere a soma com o total e avisa se não bater.
+- Gastos: categorias, metas do mês, assinaturas, parcelas e compras pontuais fora das médias.
+- Investimentos: notas de corretagem e planilhas da B3, cotações, proventos, rentabilidade contra Ibovespa e CDI, renda fixa por indexador.
+- Imposto de renda: estimativa de swing trade, day trade, DARF e bens e direitos, com exportação em CSV e PDF. Não substitui um contador.
+- Segurança: arquivos legíveis só pelo usuário, Touch ID opcional, cópia diária no iCloud Drive se estiver ativo. O arquivo de dados ainda não é criptografado.
+- Preço e forma de distribuição: ainda não definidos.
+
+## Páginas
+
+- [Página inicial](https://quintaodiogo.github.io/porcelina/): o que é, demonstração com dados fictícios e perguntas frequentes
+- [Política de privacidade](https://quintaodiogo.github.io/porcelina/#politica): o que fica no Mac e o que o app envia a terceiros
