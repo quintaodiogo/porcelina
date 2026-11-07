@@ -15,5 +15,5 @@
 
 ## Páginas
 
-- [Página inicial](https://quintaodiogo.github.io/porcelina/): o que é, demonstração com dados fictícios e perguntas frequentes
-- [Política de privacidade](https://quintaodiogo.github.io/porcelina/#politica): o que fica no Mac e o que o app envia a terceiros
+- [Página inicial](https://porcelina.com.br/): o que é, demonstração com dados fictícios e perguntas frequentes
+- [Política de privacidade](https://porcelina.com.br/#politica): o que fica no Mac e o que o app envia a terceiros
