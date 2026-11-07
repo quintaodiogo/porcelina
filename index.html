@@ -137,7 +137,7 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-b
 
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#topo" aria-label="Porcelina, início">
+    <a class="brand" href="./" id="brand" aria-label="Porcelina, início">
       <svg width="34" height="28" viewBox="14 36 236 160" aria-hidden="true">
         <path d="M70 52C90 40 130 36 152 48C158 38 162 28 168 24C176 28 184 44 188 60C196 64 202 72 206 80C216 78 234 82 236 98C238 112 228 124 214 124C204 124 200 130 196 138C193 146 192 150 192 154L192 176Q192 186 180 186Q168 186 168 176L168 160C150 166 112 166 96 160L96 176Q96 186 84 186Q72 186 72 176L72 152C50 146 30 122 34 96C36 76 50 62 70 52Z" fill="var(--rose-soft)" stroke="var(--fg)" stroke-width="9" stroke-linejoin="round"/>
       </svg>
@@ -307,6 +307,12 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-b
     cap.textContent = texto[tab.getAttribute('aria-controls')];
     if (foco) tab.focus();
   }
+  document.getElementById('brand').addEventListener('click', function (e) {
+    e.preventDefault();
+    var calmo = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: calmo ? 'auto' : 'smooth' });
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (err) {}
+  });
   var dlg = document.getElementById('zoom');
   var zimg = document.getElementById('zoom-img');
   function ampliar() {
