@@ -10,7 +10,7 @@
 - Gastos: categorias, metas do mês, assinaturas, parcelas e compras pontuais fora das médias.
 - Investimentos: notas de corretagem e planilhas da B3, cotações, proventos, rentabilidade contra Ibovespa e CDI, renda fixa por indexador.
 - Imposto de renda: estimativa de swing trade, day trade, DARF e bens e direitos, com exportação em CSV e PDF. Não substitui um contador.
-- Segurança: arquivos legíveis só pelo usuário, Touch ID opcional, cópia diária no iCloud Drive se estiver ativo. O arquivo de dados ainda não é criptografado.
+- Segurança: arquivos legíveis só pelo usuário, Touch ID opcional, cópia diária no iCloud Drive se estiver ativo, e criptografia opcional do arquivo de dados e das cópias (chave no Keychain, código de recuperação).
 - Preço e forma de distribuição: ainda não definidos.
 
 ## Páginas

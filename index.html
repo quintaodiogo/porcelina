@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-yTwqrOBvOVmsOCry06EwSRE3ujKIRLx0vSEUgrcIQeE='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="build" content="4f1b11c">
 <meta name="description" content="Porcelina é um app de finanças pessoais para Mac: importe faturas e extratos, veja para onde o dinheiro vai e acompanhe investimentos e imposto de renda. Os dados ficam no seu computador.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="color-scheme" content="light dark">
@@ -27,13 +29,16 @@
 <meta name="twitter:title" content="Porcelina: controle financeiro pessoal para Mac">
 <meta name="twitter:description" content="Porcelina é um app de finanças pessoais para Mac: importe faturas e extratos, veja para onde o dinheiro vai e acompanhe investimentos e imposto de renda. Os dados ficam no seu computador.">
 <meta name="twitter:image" content="https://porcelina.com.br/og.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Porcelina","url":"https://porcelina.com.br/","description":"Porcelina é um app de finanças pessoais para Mac: importe faturas e extratos, veja para onde o dinheiro vai e acompanhe investimentos e imposto de renda. Os dados ficam no seu computador.","applicationCategory":"FinanceApplication","operatingSystem":"macOS","inLanguage":"pt-BR","image":"https://porcelina.com.br/og.png","screenshot":["https://porcelina.com.br/img/home.jpg","https://porcelina.com.br/img/importacoes.jpg","https://porcelina.com.br/img/investimentos.jpg","https://porcelina.com.br/img/saldo.jpg"],"featureList":["Importa faturas de cartão e extratos de banco (CSV, planilhas e PDF)","Organiza gastos por categoria, metas, assinaturas e parcelas","Acompanha investimentos da B3, cotações, proventos e rentabilidade","Estima imposto de renda: swing trade, day trade e DARF","Dados guardados no próprio Mac, sem conta e sem anúncios"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Porcelina","url":"https://porcelina.com.br/","description":"Porcelina é um app de finanças pessoais para Mac: importe faturas e extratos, veja para onde o dinheiro vai e acompanhe investimentos e imposto de renda. Os dados ficam no seu computador.","applicationCategory":"FinanceApplication","operatingSystem":"macOS","inLanguage":"pt-BR","image":"https://porcelina.com.br/og.png","screenshot":["https://porcelina.com.br/img/home-1800.webp","https://porcelina.com.br/img/importacoes-1800.webp","https://porcelina.com.br/img/investimentos-1800.webp","https://porcelina.com.br/img/saldo-1800.webp"],"featureList":["Importa faturas de cartão e extratos de banco (CSV, planilhas e PDF)","Organiza gastos por categoria, metas, assinaturas e parcelas","Acompanha investimentos da B3, cotações, proventos e rentabilidade","Estima imposto de renda: swing trade, day trade e DARF","Dados guardados no próprio Mac, sem conta e sem anúncios"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Porcelina","url":"https://porcelina.com.br/","inLanguage":"pt-BR"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"pt-BR","mainEntity":[{"@type":"Question","name":"O que é a Porcelina?","acceptedAnswer":{"@type":"Answer","text":"A Porcelina é um app de finanças pessoais para Mac. Importa faturas e extratos do banco, mostra para onde o dinheiro vai, acompanha investimentos da B3 e estima o imposto de renda. Os dados ficam no seu computador."}},{"@type":"Question","name":"Funciona no Windows ou no celular?","acceptedAnswer":{"@type":"Answer","text":"Hoje a Porcelina é um app para macOS."}},{"@type":"Question","name":"Precisa de internet?","acceptedAnswer":{"@type":"Answer","text":"O painel, a importação de CSV e os cálculos funcionam offline. A internet entra nas cotações, nos índices (CDI e IPCA) e na leitura de PDF por IA, que usa o Claude Code instalado no seu Mac e só roda quando você pede."}},{"@type":"Question","name":"O imposto de renda é oficial?","acceptedAnswer":{"@type":"Answer","text":"Não. É uma estimativa para conferir a declaração. Não substitui um contador e não inclui taxas nem IRRF."}},{"@type":"Question","name":"Posso baixar agora?","acceptedAnswer":{"@type":"Answer","text":"Ainda não. A primeira versão para outras pessoas está em preparação; preço e forma de distribuição ainda não foram definidos."}}]}</script>
 <title>Porcelina: controle financeiro pessoal para Mac</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* Nunito hospedada junto do site (SIL OFL). Nada é pedido a outro domínio. */
+@font-face { font-family: "Nunito"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/nunito-400.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/nunito-600.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-style: normal; font-weight: 800; font-display: swap; src: url("fonts/nunito-800.woff2") format("woff2"); }
+</style>
 <style>
 /* Layout: minimalista como o app. Fundo cinza-quente, texto ameixa, uma única cor de destaque (rosa). O mascote abre a página. */
 :root {
@@ -224,10 +229,10 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-b
       <div class="mac">
         <div class="mac-bar"><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><span aria-hidden="true">Porcelina</span><button class="zoom-btn" id="zoom-open" type="button">Ampliar tela</button></div>
         <div class="mac-body">
-          <div role="tabpanel" id="p-home" aria-labelledby="t-home"><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/home.jpg" width="1800" height="1072" alt="Visão geral com o total do mês, a média mensal e as últimas importações"></button></div>
-          <div role="tabpanel" id="p-imp" aria-labelledby="t-imp" hidden><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/importacoes.jpg" width="1800" height="1072" alt="Importações: histórico de faturas e extratos em tabela, com os meses cobertos"></button></div>
-          <div role="tabpanel" id="p-inv" aria-labelledby="t-inv" hidden><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/investimentos.jpg" width="1800" height="1072" alt="Investimentos: ativos, patrimônio e resultado"></button></div>
-          <div role="tabpanel" id="p-sal" aria-labelledby="t-sal" hidden><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/saldo.jpg" width="1800" height="1072" alt="Saldo: receitas, gastos e quanto sobrou por mês"></button></div>
+          <div role="tabpanel" id="p-home" aria-labelledby="t-home"><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/home-1800.webp" srcset="img/home-720.webp 720w, img/home-1800.webp 1800w" sizes="(max-width: 900px) 100vw, 1100px" fetchpriority="high" width="1800" height="1072" alt="Visão geral com o total do mês, a média mensal e as últimas importações"></button></div>
+          <div role="tabpanel" id="p-imp" aria-labelledby="t-imp" hidden><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/importacoes-1800.webp" srcset="img/importacoes-720.webp 720w, img/importacoes-1800.webp 1800w" sizes="(max-width: 900px) 100vw, 1100px" loading="lazy" width="1800" height="1072" alt="Importações: histórico de faturas e extratos em tabela, com os meses cobertos"></button></div>
+          <div role="tabpanel" id="p-inv" aria-labelledby="t-inv" hidden><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/investimentos-1800.webp" srcset="img/investimentos-720.webp 720w, img/investimentos-1800.webp 1800w" sizes="(max-width: 900px) 100vw, 1100px" loading="lazy" width="1800" height="1072" alt="Investimentos: ativos, patrimônio e resultado"></button></div>
+          <div role="tabpanel" id="p-sal" aria-labelledby="t-sal" hidden><button class="zoom-img" type="button" aria-label="Ampliar esta tela"><img src="img/saldo-1800.webp" srcset="img/saldo-720.webp 720w, img/saldo-1800.webp 1800w" sizes="(max-width: 900px) 100vw, 1100px" loading="lazy" width="1800" height="1072" alt="Saldo: receitas, gastos e quanto sobrou por mês"></button></div>
         </div>
       </div>
       <dialog id="zoom" aria-label="Tela ampliada"><button class="zoom-x" id="zoom-close" type="button">Fechar</button><img id="zoom-img" alt=""></dialog>
@@ -265,6 +270,7 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-b
         </div>
         <ul>
           <li>Bloqueio com Touch ID, se você ativar</li>
+          <li>Criptografia dos dados no Mac, se você ativar</li>
           <li>Cópia diária no iCloud Drive, se estiver ativo</li>
           <li>Valores ocultos com um clique</li>
           <li>Modo demonstração para mostrar sem expor seus dados</li>
@@ -312,7 +318,7 @@ footer { display: flex; flex-wrap: wrap; gap: 6px 24px; justify-content: space-b
         <h3>Seus direitos</h3>
         <p>Como os dados ficam no seu Mac, você os acessa, corrige, exporta (CSV e cópia dos dados) e apaga pelo próprio app, removendo arquivos ou a pasta de dados. Para outras dúvidas sobre a LGPD, o contato será publicado aqui.</p>
         <h3>Segurança</h3>
-        <p>Os arquivos do app só são legíveis pelo seu usuário, e você pode ativar o bloqueio por Touch ID. O arquivo de dados ainda não é criptografado; isso está planejado.</p>
+        <p>Os arquivos do app só são legíveis pelo seu usuário, e você pode ativar o bloqueio por Touch ID. Você também pode criptografar o arquivo de dados e as cópias: a chave fica no Keychain do Mac e um código de recuperação abre os dados em outro computador.</p>
         <h3>Crianças</h3>
         <p>A Porcelina não é voltada a menores de 18 anos.</p>
         <p class="nota">Este texto não é aconselhamento jurídico e muda com o produto. Última atualização: 07/11/2026.</p>
